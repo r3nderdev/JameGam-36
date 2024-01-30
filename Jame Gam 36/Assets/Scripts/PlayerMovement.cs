@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -53,12 +51,12 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;
     }
-
+    
     private void FixedUpdate()
     {
-        MovePlayer();
+     MovePlayer();
     }
-
+    
     private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
