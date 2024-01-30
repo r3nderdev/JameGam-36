@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6042880973048041629}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,9 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8809982c0467f2240bd8548dffac31c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candleLighting: {fileID: 0}
-  particles: {fileID: 0}
-  candleKey: 101
+  candleLighting: {fileID: 5081109487704595535}
+  particles: {fileID: 6275613354728586312}
+  rayStart: {fileID: 0}
+  rayLenght: 10
+  text: {fileID: 0}
 --- !u!1 &2889799365079280371
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,10 +360,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4738220133883446882}
     m_Modifications:
+    - target: {fileID: 2191299563873754680, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6927905424964838443, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
         type: 3}
       propertyPath: m_Name
       value: Candle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000886707484355005, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8545061951378705738, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
         type: 3}
@@ -418,9 +430,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05, type: 3}
+--- !u!1 &5081109487704595535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7000886707484355005, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 2858553718711006706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5854037280742078648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545061951378705738, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 2858553718711006706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6275613354728586312 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8123625588376160698, guid: 6c6e5c5c7d8d05f4ea09acc5d28c2a05,
     type: 3}
   m_PrefabInstance: {fileID: 2858553718711006706}
   m_PrefabAsset: {fileID: 0}

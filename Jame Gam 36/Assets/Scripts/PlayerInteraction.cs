@@ -13,7 +13,6 @@ public class PlayerInteraction : MonoBehaviour
     public TMP_Text text;
 
     public static bool candleOn;
-    public KeyCode candleKey = KeyCode.E;
 
 
     // Update is called once per frame
@@ -43,7 +42,7 @@ public class PlayerInteraction : MonoBehaviour
                 text.enabled = true;
 
                 // If player presses E
-                if (Input.GetKeyDown(candleKey))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("Lit Candle");
                 }
@@ -68,7 +67,7 @@ public class PlayerInteraction : MonoBehaviour
             text.enabled = false;
 
             // If the key to light the held candle is pressed
-            if (Input.GetKeyDown(candleKey))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 // If the candle is already on, extinguish it
                 if (candleOn)
