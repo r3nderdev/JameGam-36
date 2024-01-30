@@ -13,12 +13,21 @@ public class PlayerInteraction : MonoBehaviour
     public TMP_Text text;
 
     public static bool candleOn;
-    public KeyCode candleKey = KeyCode.Mouse0;
+    public KeyCode candleKey = KeyCode.E;
 
 
     // Update is called once per frame
     void Update()
     {
+        // Sets the candleOn static variable
+        if (candleLighting.activeInHierarchy == true)
+        {
+            candleOn = true;
+        }
+        else
+            candleOn = false;
+
+
         // Raycast for checking candles
 
         // Debug ray because yes
@@ -34,7 +43,7 @@ public class PlayerInteraction : MonoBehaviour
                 text.enabled = true;
 
                 // If player presses E
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(candleKey))
                 {
                     Debug.Log("Lit Candle");
                 }
@@ -43,44 +52,37 @@ public class PlayerInteraction : MonoBehaviour
             // If we're not hitting a candle anymore 
             else
             {
-                text.enabled = false;
+                HeldCandle();
             }
 
         }
         // If we're not hitting anything anymore 
         else
         {
+            HeldCandle();
+        }
+
+        // Runs when we're not hitting a world candle
+        void HeldCandle()
+        {
             text.enabled = false;
-        }
 
-
-
-
-        // Sets the candleOn static variable
-        if (candleLighting.activeInHierarchy == true)
-        {
-            candleOn = true;
-        }
-        else
-            candleOn = false;
-
-        // If the key to light the candle is pressed
-        if (Input.GetKeyDown(candleKey))
-        {
-            // If the candle is already on, extinguish it
-            if (candleOn)
+            // If the key to light the held candle is pressed
+            if (Input.GetKeyDown(candleKey))
             {
-                candleLighting.SetActive(false);
-                particles.Stop();
+                // If the candle is already on, extinguish it
+                if (candleOn)
+                {
+                    candleLighting.SetActive(false);
+                    particles.Stop();
+                }
+                // If it is off, light it
+                else if (!candleOn)
+                {
+                    candleLighting.SetActive(true);
+                    particles.Play();
+                }
             }
-            // If it is off, light it
-            else if (!candleOn)
-            {
-                candleLighting.SetActive(true);
-                particles.Play();
-            }
-
-
         }
     }
 }
