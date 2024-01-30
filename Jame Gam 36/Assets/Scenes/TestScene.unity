@@ -613,6 +613,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1771516997 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+    type: 3}
+  m_PrefabInstance: {fileID: 3790033918104805259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1844773215
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +689,76 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 330585546}
+    - target: {fileID: 979865551323868127, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: m_Flip.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 979865551323868127, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: m_Flip.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 979865551323868127, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: m_AllowRoll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979865551323868127, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683222364191240485, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042880973048041629, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
+        type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 1771516997}
     - target: {fileID: 8243517729288007602, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,6 +4,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     [Header("Candle")]
     public GameObject candleLighting;
+    public ParticleSystem particles;
 
     public static bool candleOn;
     public KeyCode candleKey = KeyCode.E;
@@ -25,10 +26,17 @@ public class PlayerInteraction : MonoBehaviour
         {
             // If the candle is already on, extinguish it
             if (candleOn)
+            {
                 candleLighting.SetActive(false);
+                particles.Stop();
+            }
             // If it is off, light it
             else if (!candleOn)
+            {
                 candleLighting.SetActive(true);
+                particles.Play();
+            }
+
 
         }
     }
