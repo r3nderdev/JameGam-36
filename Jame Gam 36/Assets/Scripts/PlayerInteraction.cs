@@ -12,6 +12,9 @@ public class PlayerInteraction : MonoBehaviour
     public float rayLenght;
     public TMP_Text text;
 
+    [Header("Book")]
+    public GameObject book;
+
     public static bool candleOn;
 
     private GameObject hitCandle;

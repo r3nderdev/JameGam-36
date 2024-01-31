@@ -7,6 +7,9 @@ public class PlayerCamera : MonoBehaviour
 
     public Transform orientation;
 
+    [Header("Book")]
+    public GameObject book;
+
     float xRotation;
     float yRotation;
 
@@ -18,19 +21,32 @@ public class PlayerCamera : MonoBehaviour
 
     private void Update()
     {
-        // Get mouse input
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+        // If the book gameobject is active in scene
+        if (book.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else if (!book.activeSelf)
+        {
+            // if the book isn't active run all the normal code for camera
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
-        yRotation += mouseX;
+            // Get mouse input
+            float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
+            float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
-        xRotation -= mouseY;
+            yRotation += mouseX;
 
-        // Limit view 
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            xRotation -= mouseY;
 
-        // Rotate camera and player orientation
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+            // Limit view 
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            // Rotate camera and player orientation
+            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        }
     }
 }
