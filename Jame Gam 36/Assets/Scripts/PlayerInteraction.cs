@@ -11,13 +11,13 @@ public class PlayerInteraction : MonoBehaviour
     public Transform rayStart;
     public float rayLenght;
     public TMP_Text text;
+    public TMP_Text bookText;
 
-    [Header("Book")]
-    public GameObject book;
 
     public static bool candleOn;
 
     private GameObject hitCandle;
+    private GameObject hitBook;
 
 
     // Update is called once per frame
@@ -55,6 +55,22 @@ public class PlayerInteraction : MonoBehaviour
                     Debug.Log("Lit Candle");
                 }
                 
+            }
+            // If we're hitting a book
+            if (hit.collider.CompareTag("Book"))
+            {
+                // Enable UI element to indicate interaction
+                bookText.enabled = true;
+
+                // If player presses E
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitBook = hit.transform.gameObject;
+                    hitBook.GetComponent<CandleLogic>().LightCandle();
+
+                    Debug.Log("Opened Book");
+                }
+
             }
             // If we're not hitting a candle anymore 
             else
