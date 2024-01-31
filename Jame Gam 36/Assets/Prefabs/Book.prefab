@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2091715387038244280}
   - component: {fileID: 427982504285980976}
   - component: {fileID: 6032926991765315764}
+  - component: {fileID: 71082390507715840}
   m_Layer: 0
   m_Name: Book
-  m_TagString: Untagged
+  m_TagString: Book
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,9 +103,23 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.006
   m_Center: {x: 0.0000226064, y: -0.00010721779, z: -0.00003686919}
+--- !u!114 &71082390507715840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6545466775167276306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6252526d17584240b3345717aef4dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  bookScript: {fileID: 0}

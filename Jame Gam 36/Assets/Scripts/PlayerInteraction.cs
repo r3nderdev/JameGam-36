@@ -66,14 +66,18 @@ public class PlayerInteraction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hitBook = hit.transform.gameObject;
-                    hitBook.GetComponent<CandleLogic>().LightCandle();
+                    hitBook.GetComponent<BookLogic>().OpenBook();
 
                     Debug.Log("Opened Book");
                 }
 
             }
+            else if (!hit.collider.CompareTag("Book"))
+            {
+                bookText.enabled = false;
+            }
             // If we're not hitting a candle anymore 
-            else
+            else if (!hit.collider.CompareTag("Candle"))
             {
                 HeldCandle();
             }
