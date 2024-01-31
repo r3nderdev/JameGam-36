@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8142873935330013038}
   - component: {fileID: 5528322730606298211}
   - component: {fileID: 5340743818260377222}
+  - component: {fileID: 6334791338294883869}
   m_Layer: 7
   m_Name: Candle
   m_TagString: Candle
@@ -108,6 +109,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.47
   m_Center: {x: 0, y: 0.2, z: 0}
+--- !u!114 &6334791338294883869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808819133170522655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd36a8c69628ad4b9d3bf45e6d7c000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candleLighting: {fileID: 4576180711086457063}
+  particles: {fileID: 4704748452377346259}
 --- !u!1 &2309390938828078220
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5025980329600133524
 Transform:
   m_ObjectHideFlags: 0
@@ -326,7 +341,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -563,7 +578,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1199,7 +1214,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4.6
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5077,15 +5092,15 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 2
-  m_MinParticleSize: 0
-  m_MaxParticleSize: 0.018
+  m_MinParticleSize: 0.000001
+  m_MaxParticleSize: 1e+9
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 0
+  m_RenderAlignment: 3
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_EnableGPUInstancing: 1

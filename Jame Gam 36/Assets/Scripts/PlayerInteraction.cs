@@ -14,6 +14,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public static bool candleOn;
 
+    private GameObject hitCandle;
+
 
     // Update is called once per frame
     void Update()
@@ -44,6 +46,9 @@ public class PlayerInteraction : MonoBehaviour
                 // If player presses E
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    hitCandle = hit.transform.gameObject;
+                    hitCandle.GetComponent<CandleLogic>().LightCandle();
+                    
                     Debug.Log("Lit Candle");
                 }
                 

@@ -898,16 +898,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle
       objectReference: {fileID: 0}
-    - target: {fileID: 4704748452377346259, guid: e271e9bf9be911b4aa0c2bc6037745d3,
-        type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704748452377346259, guid: e271e9bf9be911b4aa0c2bc6037745d3,
-        type: 3}
-      propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5877876153874154906, guid: e271e9bf9be911b4aa0c2bc6037745d3,
         type: 3}
       propertyPath: m_LocalPosition.x
