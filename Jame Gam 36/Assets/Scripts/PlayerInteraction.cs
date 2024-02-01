@@ -10,9 +10,10 @@ public class PlayerInteraction : MonoBehaviour
     [Header("Raycast")]
     public Transform rayStart;
     public float rayLenght;
-    public TMP_Text text;
+    public TMP_Text candleText;
     public TMP_Text bookText;
-
+    public LayerMask candleLayerMask;
+    public LayerMask bookLayerMask;
 
     public static bool candleOn;
 
@@ -32,67 +33,54 @@ public class PlayerInteraction : MonoBehaviour
             candleOn = false;
 
 
-        // Raycast for checking candles
-
-        // Debug ray because yes
-        Debug.DrawRay(rayStart.position, rayStart.transform.forward, Color.cyan);
-
-        // Raycast
-        if (Physics.Raycast(rayStart.position, rayStart.transform.forward, out RaycastHit hit, rayLenght))
+        // If we're hitting a candle
+        if (Physics.Raycast(rayStart.position, rayStart.transform.forward, out RaycastHit hit, rayLenght, candleLayerMask))
         {
-            // If we're hitting a candle
-            if (hit.collider.CompareTag("Candle"))
+            // Enable UI element to indicate interaction
+            candleText.enabled = true;
+
+            // If player presses E
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                // Enable UI element to indicate interaction
-                text.enabled = true;
+                hitCandle = hit.transform.gameObject;
+                hitCandle.GetComponent<CandleLogic>().LightCandle();
 
-                // If player presses E
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    hitCandle = hit.transform.gameObject;
-                    hitCandle.GetComponent<CandleLogic>().LightCandle();
-                    
-                    Debug.Log("Lit Candle");
-                }
-                
+                Debug.Log("Lit Candle");
             }
-            // If we're hitting a book
-            if (hit.collider.CompareTag("Book"))
-            {
-                // Enable UI element to indicate interaction
-                bookText.enabled = true;
-
-                // If player presses E
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    hitBook = hit.transform.gameObject;
-                    hitBook.GetComponent<BookLogic>().OpenBook();
-
-                    Debug.Log("Opened Book");
-                }
-
-            }
-            else if (!hit.collider.CompareTag("Book"))
-            {
-                bookText.enabled = false;
-            }
-            // If we're not hitting a candle anymore 
-            else if (!hit.collider.CompareTag("Candle"))
-            {
-                HeldCandle();
-            }
-
         }
-        // If we're not hitting anything anymore 
-        else
+        // If we're not hitting a candle anymore 
+        else 
         {
             HeldCandle();
+        }
+
+
+
+        // If we're hitting a book
+        if (Physics.Raycast(rayStart.position, rayStart.transform.forward, out RaycastHit _hit, rayLenght, bookLayerMask))
+        {
+            // Enable UI element to indicate interaction
+            bookText.enabled = true;
+
+            // If player presses E
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitBook = _hit.transform.gameObject;
+                hitBook.GetComponent<BookLogic>().OpenBook();
+
+                Debug.Log("Opened Book");
+            }
+        }
+        // If we're not hitting a book anymore
+        else
+        {
+            bookText.enabled = false;
         }
 
         // Runs when we're not hitting a world candle
         void HeldCandle()
         {
-            text.enabled = false;
+            candleText.enabled = false;
 
             // If the key to light the held candle is pressed
             if (Input.GetKeyDown(KeyCode.E))

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4387422376169763947}
   - component: {fileID: 2234412886470340464}
   - component: {fileID: 3301190330225071968}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 5025980329600133524}
   - component: {fileID: 4704748452377346259}
   - component: {fileID: 6841537510554772061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5133,7 +5133,7 @@ GameObject:
   - component: {fileID: 8637564032681953795}
   - component: {fileID: 8661075034024941835}
   - component: {fileID: 7567469805597700160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Candle Top Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

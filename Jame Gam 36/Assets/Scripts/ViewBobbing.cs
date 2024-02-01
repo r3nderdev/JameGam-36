@@ -22,7 +22,7 @@ public class ViewBobbing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 inputVector = new Vector3(Input.GetAxis("Vertical"), 0f, Input.GetAxis("Horizontal"));
+        Vector3 inputVector = new(Input.GetAxis("Vertical"), 0f, Input.GetAxis("Horizontal"));
 
         if (inputVector.magnitude > 0f)
         {
@@ -34,7 +34,7 @@ public class ViewBobbing : MonoBehaviour
         }
 
         float sinAmountY = -Mathf.Abs(intensity * Mathf.Sin(sinTime));
-        Vector3 sinAmountX = followerInstance.transform.right * intensity * Mathf.Cos(sinTime) * intensityX;
+        Vector3 sinAmountX = intensity * intensityX * Mathf.Cos(sinTime) * followerInstance.transform.right;
 
         followerInstance.Offset = new Vector3
         {
