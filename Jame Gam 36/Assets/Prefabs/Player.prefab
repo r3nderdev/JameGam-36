@@ -102,9 +102,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candleLighting: {fileID: 5081109487704595535}
   particles: {fileID: 6275613354728586312}
+  candleLife: 0
+  candleDeadText: {fileID: 0}
   rayStart: {fileID: 0}
-  rayLenght: 10
-  text: {fileID: 0}
+  rayLenght: 1.6
+  candleText: {fileID: 0}
+  bookText: {fileID: 0}
+  candleLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  bookLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &2889799365079280371
 GameObject:
   m_ObjectHideFlags: 0
