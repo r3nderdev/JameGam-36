@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerInteraction : MonoBehaviour
@@ -6,6 +7,8 @@ public class PlayerInteraction : MonoBehaviour
     [Header("Candle")]
     public GameObject candleLighting;
     public ParticleSystem particles;
+    public float candleLife;
+    public TMP_Text candleDeadText;
 
     [Header("Raycast")]
     public Transform rayStart;
@@ -16,6 +19,7 @@ public class PlayerInteraction : MonoBehaviour
     public LayerMask bookLayerMask;
 
     public static bool candleOn;
+    public static bool candleDead;
 
     private GameObject hitCandle;
     private GameObject hitBook;
@@ -28,10 +32,23 @@ public class PlayerInteraction : MonoBehaviour
         if (candleLighting.activeInHierarchy == true)
         {
             candleOn = true;
+            candleDead = false;
+            // Deplete candle life
+            candleLife -= Time.deltaTime;
+            Debug.Log("Candle Life: " + candleLife);
         }
         else
             candleOn = false;
 
+        // Candle death
+        if (candleLife < 0)
+        {
+            // Candle has died
+            candleDead = true;
+            candleLighting.SetActive(false);
+            particles.Stop();
+            candleDeadText.enabled = true;
+        }
 
         // If we're hitting a candle
         if (Physics.Raycast(rayStart.position, rayStart.transform.forward, out RaycastHit hit, rayLenght, candleLayerMask))
@@ -77,13 +94,20 @@ public class PlayerInteraction : MonoBehaviour
             bookText.enabled = false;
         }
 
+        // Restarts the level if player hits R
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         // Runs when we're not hitting a world candle
         void HeldCandle()
         {
             candleText.enabled = false;
 
+
             // If the key to light the held candle is pressed
-            if (Input.GetKeyDown(KeyCode.E))
+            if (!candleDead && Input.GetKeyDown(KeyCode.E))
             {
                 // If the candle is already on, extinguish it
                 if (candleOn)
