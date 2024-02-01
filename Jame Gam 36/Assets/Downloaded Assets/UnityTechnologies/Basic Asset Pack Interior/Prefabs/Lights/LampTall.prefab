@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423189617985187196}
+  - component: {fileID: 8126547158530893524}
   m_Layer: 9
   m_Name: LampTall
   m_TagString: Untagged
@@ -36,6 +37,27 @@ Transform:
   - {fileID: 268414770562369233}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8126547158530893524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768788505996539846}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42593583, y: 1.8308316, z: 0.47961122}
+  m_Center: {x: -0.003299281, y: 0.89710325, z: 0.011553317}
 --- !u!1 &2143742768280229865
 GameObject:
   m_ObjectHideFlags: 0
