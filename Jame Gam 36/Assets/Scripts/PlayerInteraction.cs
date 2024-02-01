@@ -44,7 +44,7 @@ public class PlayerInteraction : MonoBehaviour
             candleDead = false;
             // Deplete candle life
             candleLife -= Time.deltaTime;
-            Debug.Log("Candle Life: " + candleLife);
+            Debug.Log("Candle Life Left: " + candleLife);
         }
         else
             candleOn = false;

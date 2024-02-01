@@ -5,9 +5,14 @@ public class BookLogic : MonoBehaviour
     public Animator animator;
     [SerializeField] Book bookScript;
 
+
+
+
+
     public void OpenBook()
     {
         animator.SetTrigger("BookOpen");
+        gameObject.GetComponent<Animator>().SetTrigger("BookDisappear");
         gameObject.GetComponent<SphereCollider>().enabled = false;
     }
 
