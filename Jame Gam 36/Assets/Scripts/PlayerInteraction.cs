@@ -10,6 +10,9 @@ public class PlayerInteraction : MonoBehaviour
     public float candleLife;
     public TMP_Text candleDeadText;
 
+    [Header("Capsule")]
+    public MeshRenderer capsule;
+
     [Header("Raycast")]
     public Transform rayStart;
     public float rayLenght;
@@ -23,6 +26,12 @@ public class PlayerInteraction : MonoBehaviour
 
     private GameObject hitCandle;
     private GameObject hitBook;
+
+    private void Start()
+    {
+        // Disable player capsule
+        capsule.enabled = false;
+    }
 
 
     // Update is called once per frame
