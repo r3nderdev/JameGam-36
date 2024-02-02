@@ -130,16 +130,38 @@ public class PlayerInteraction : MonoBehaviour
                     // If the candle is already on, extinguish it
                     if (candleOn)
                     {
-                        AudioManager.Instance.PlaySFX("BlowCandle");
-                        candleLighting.SetActive(false);
-                        particles.Stop();
+                        // Fix
+                        if (AudioManager.Instance == null)
+                        {
+                            Debug.Log("AudioManager Null");
+                            candleLighting.SetActive(false);
+                            particles.Stop();
+                        }
+                        else
+                        {
+                            AudioManager.Instance.PlaySFX("BlowCandle");
+                            candleLighting.SetActive(false);
+                            particles.Stop();
+                        }
+                        
+                        
                     }
                     // If it is off, light it
                     else if (!candleOn)
                     {
-                        AudioManager.Instance.PlaySFX("Match");
-                        candleLighting.SetActive(true);
-                        particles.Play();
+                        // Patchy fix
+                        if (AudioManager.Instance == null)
+                        {
+                            Debug.Log("AudioManager Null");
+                            candleLighting.SetActive(true);
+                            particles.Play();
+                        }
+                        else
+                        {
+                            AudioManager.Instance.PlaySFX("Match");
+                            candleLighting.SetActive(true);
+                            particles.Play();
+                        }
                     }
                 }
              
