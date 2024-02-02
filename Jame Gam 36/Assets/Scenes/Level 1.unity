@@ -1499,11 +1499,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3195417815100490063, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 648948766}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3, type: 3}
 --- !u!4 &412853701 stripped
 Transform:
@@ -1886,28 +1882,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 647411595}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &648948763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3195417815100490063, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3,
+--- !u!114 &648948766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6007741504734632150, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3,
     type: 3}
   m_PrefabInstance: {fileID: 412853700}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &648948766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648948763}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
-  DefaultRotInfluence: {x: 1, y: 1, z: 1}
-  RestPositionOffset: {x: 0, y: 0, z: 0}
-  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &677208544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3089,11 +3075,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 412853701}
-    - target: {fileID: 5748668630119181087, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6042880973048041629, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
         type: 3}
       propertyPath: bookText
@@ -3104,11 +3085,6 @@ PrefabInstance:
       propertyPath: rayStart
       value: 
       objectReference: {fileID: 412853701}
-    - target: {fileID: 6042880973048041629, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
-        type: 3}
-      propertyPath: candleLife
-      value: 999
-      objectReference: {fileID: 0}
     - target: {fileID: 6042880973048041629, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
         type: 3}
       propertyPath: candleText
@@ -3169,11 +3145,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9148282727545717241, guid: 4b1638bc2cc3ba140ab8587aa99f7b31,
-        type: 3}
-      propertyPath: TargetTransform
-      value: 
-      objectReference: {fileID: 1401624263}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5436,31 +5407,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1951597676602208183, guid: 93bf33674c1ed184282c423d39286f1e,
-        type: 3}
-      propertyPath: m_Name
-      value: Black
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678684889043059635, guid: 93bf33674c1ed184282c423d39286f1e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678684889043059635, guid: 93bf33674c1ed184282c423d39286f1e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678684889043059635, guid: 93bf33674c1ed184282c423d39286f1e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678684889043059635, guid: 93bf33674c1ed184282c423d39286f1e,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6787466495437788832, guid: 93bf33674c1ed184282c423d39286f1e,
         type: 3}
       propertyPath: m_Name

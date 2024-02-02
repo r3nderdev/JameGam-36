@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candleLighting: {fileID: 5081109487704595535}
   particles: {fileID: 6275613354728586312}
-  candleLife: 0
+  candleLife: 999
   candleDeadText: {fileID: 0}
   capsule: {fileID: 3651071600922471660}
   rayStart: {fileID: 0}
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16af96d2f63242c43a849999529a0023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetTransform: {fileID: 0}
+  TargetTransform: {fileID: 1653755902036710772}
   Offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!114 &425761374501213311

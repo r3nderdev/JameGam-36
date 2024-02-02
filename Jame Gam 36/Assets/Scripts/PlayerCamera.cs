@@ -17,6 +17,9 @@ public class PlayerCamera : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Fix camera orientation when spawning
+        xRotation = 0f;
     }
 
     private void Update()
@@ -49,4 +52,5 @@ public class PlayerCamera : MonoBehaviour
             orientation.rotation = Quaternion.Euler(0, yRotation, 0);
         }
     }
+
 }

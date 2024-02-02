@@ -29,6 +29,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
+        PlayerMovement.canMove = true;
         // Disable player capsule
         capsule.enabled = false;
     }
