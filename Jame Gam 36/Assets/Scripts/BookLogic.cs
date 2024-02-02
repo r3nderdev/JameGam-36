@@ -11,6 +11,7 @@ public class BookLogic : MonoBehaviour
     public Transform cameraPos;
     public CameraShaker shaker;
     [SerializeField] Book bookScript;
+    public LevelFade levelFade;
 
 
 
@@ -44,6 +45,7 @@ public class BookLogic : MonoBehaviour
                 textPanel.SetActive(false);
                 Debug.Log("World Changing");
                 //Trigger world change
+                levelFade.FadeToLevel(1);
             }
         }
         else
