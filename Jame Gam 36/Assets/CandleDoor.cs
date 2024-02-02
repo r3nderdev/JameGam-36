@@ -20,4 +20,14 @@ public class CandleDoor : MonoBehaviour
             }
         }
     }
+
+    public void PlayHideSound()
+    {
+        AudioManager.Instance.PlaySFX("DoorHide");
+    }
+
+    public void PlayShowSound()
+    {
+        AudioManager.Instance.PlaySFX("DoorShow");
+    }
 }
