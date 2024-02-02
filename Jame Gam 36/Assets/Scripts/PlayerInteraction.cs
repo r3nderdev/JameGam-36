@@ -37,6 +37,9 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Debuggin'
+        Debug.DrawRay(rayStart.position, rayStart.transform.forward, Color.cyan);
+
         // Sets the candleOn static variable
         if (candleLighting.activeInHierarchy == true)
         {
@@ -81,7 +84,7 @@ public class PlayerInteraction : MonoBehaviour
         }
 
 
-
+        
         // If we're hitting a book
         if (Physics.Raycast(rayStart.position, rayStart.transform.forward, out RaycastHit _hit, rayLenght, bookLayerMask))
         {

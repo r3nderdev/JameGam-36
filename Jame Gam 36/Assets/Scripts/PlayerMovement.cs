@@ -4,8 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
-
     public float groundDrag;
+    public static bool canMove;
 
     [Header("Jump & Air Control")]
     public float jumpForce;
@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        canMove = true;
         rb = GetComponent<Rigidbody>();
         readyToJump = true;
     }
@@ -54,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-     MovePlayer();
+        if (canMove)
+            MovePlayer();
     }
     
     private void MyInput()

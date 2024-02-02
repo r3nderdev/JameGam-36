@@ -1493,7 +1493,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3195417815100490063, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 648948766}
   m_SourcePrefab: {fileID: 100100000, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3, type: 3}
 --- !u!4 &412853701 stripped
 Transform:
@@ -1719,7 +1723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1945,6 +1949,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 647411595}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &648948763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3195417815100490063, guid: d02b5ef9bcdd47f4cba2e9dd37f9dfb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 412853700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &648948766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648948763}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &677208544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2387,6 +2413,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 71082390507715840, guid: 53fefacac53ecb64caa409a304215b21,
         type: 3}
+      propertyPath: shaker
+      value: 
+      objectReference: {fileID: 648948766}
+    - target: {fileID: 71082390507715840, guid: 53fefacac53ecb64caa409a304215b21,
+        type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 107449531}
@@ -2395,6 +2426,11 @@ PrefabInstance:
       propertyPath: bookText
       value: 
       objectReference: {fileID: 124727555}
+    - target: {fileID: 71082390507715840, guid: 53fefacac53ecb64caa409a304215b21,
+        type: 3}
+      propertyPath: cameraPos
+      value: 
+      objectReference: {fileID: 1401624263}
     - target: {fileID: 71082390507715840, guid: 53fefacac53ecb64caa409a304215b21,
         type: 3}
       propertyPath: textPanel
