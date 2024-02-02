@@ -33,11 +33,12 @@ public class BookLogic : MonoBehaviour
             // If player says Lux Echo
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // Start camera shake
+                // Start camera shake and million other things
                 shaker.enabled = true;
                 shaker.RestPositionOffset = new Vector3(cameraPos.position.x,cameraPos.position.y,cameraPos.position.z);
                 shaker.RestRotationOffset = new Vector3(cameraPos.rotation.x, cameraPos.rotation.y, cameraPos.rotation.z);
                 CameraShaker.Instance.StartShake(3f, 3f, 1f);
+                AudioManager.Instance.PlaySFX("Rumble");
                 animator.SetTrigger("BookClose");
                 bookText.enabled = false;
                 textPanel.SetActive(false);

@@ -310,5 +310,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 43cdf1ed8259f0341b8deed945b44745, type: 3}
   - name: Match
     clip: {fileID: 8300000, guid: b316ba649c777454fba0ba683d9fd2a7, type: 3}
+  - name: Rumble
+    clip: {fileID: 8300000, guid: 7dfd9bfcf1bf07b4d9f08fe94e541db0, type: 3}
   musicSource: {fileID: 4803193464281812250}
   sfxSource: {fileID: 1494663945743482097}
