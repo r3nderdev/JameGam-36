@@ -10,7 +10,7 @@ public class FinalLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (book.currentPage == 4)
+        if (book.currentPage == 6)
         {
             // End game
             fade.FadeToLevel(3);
