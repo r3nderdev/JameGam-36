@@ -96,7 +96,7 @@ public class PlayerInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 hitBook = _hit.transform.gameObject;
-                hitBook.GetComponent<BookLogic>().OpenBook();
+                hitBook.GetComponentInParent<BookLogic>().OpenBook();
 
                 Debug.Log("Opened Book");
             }

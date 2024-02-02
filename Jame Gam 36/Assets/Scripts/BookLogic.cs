@@ -21,7 +21,7 @@ public class BookLogic : MonoBehaviour
     {
         PlayerMovement.canMove = false;
         animator.SetTrigger("BookOpen");
-        gameObject.GetComponent<Animator>().SetTrigger("BookDisappear");
+        gameObject.GetComponentInParent<Animator>().SetTrigger("BookDisappear");
         gameObject.GetComponent<SphereCollider>().enabled = false;
     }
 
