@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using EZCameraShake;
+using UnityEngine.SceneManagement;
 
 public class BookLogic : MonoBehaviour
 {
@@ -14,9 +15,6 @@ public class BookLogic : MonoBehaviour
     public LevelFade levelFade;
 
 
-
-
-
     public void OpenBook()
     {
         PlayerMovement.canMove = false;
@@ -27,6 +25,7 @@ public class BookLogic : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Update Running");
         if(bookScript.currentPage == 4)
         {
             // Show text
@@ -45,7 +44,7 @@ public class BookLogic : MonoBehaviour
                 textPanel.SetActive(false);
                 Debug.Log("World Changing");
                 //Trigger world change
-                levelFade.FadeToLevel(1);
+                levelFade.FadeToLevel(SceneManager.GetActiveScene().buildIndex+1);
             }
         }
         else
