@@ -1,7 +1,19 @@
 using UnityEngine;
+using System;
+using System.Collections;
 
 public class CandleDoor : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip doorHide;
+    public AudioClip doorShow;
+
+    private void Start()
+    {
+        StartCoroutine(StartMute());
+    }
+
+
     private void Update()
     {
         if (PlayerInteraction.candleOn)
@@ -23,11 +35,20 @@ public class CandleDoor : MonoBehaviour
 
     public void PlayHideSound()
     {
-        AudioManager.Instance.PlaySFX("DoorHide");
-    }
+        source.clip = doorHide;
+        source.Play();
+    }   
 
     public void PlayShowSound()
     {
-        AudioManager.Instance.PlaySFX("DoorShow");
+        source.clip = doorShow;
+        source.Play();
+    }
+
+    IEnumerator StartMute()
+    {
+        source.mute = true;
+        yield return new WaitForSeconds(2);
+        source.mute = false;
     }
 }

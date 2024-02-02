@@ -5,6 +5,7 @@ using TMPro;
 public class PlayerInteraction : MonoBehaviour
 {
     [Header("Candle")]
+    public GameObject candle;
     public GameObject candleLighting;
     public ParticleSystem particles;
     public float candleLife;
@@ -117,24 +118,31 @@ public class PlayerInteraction : MonoBehaviour
         {
             candleText.enabled = false;
 
-
-            // If the key to light the held candle is pressed
-            if (!candleDead && Input.GetKeyDown(KeyCode.E))
+            if (candle == null)
             {
-                // If the candle is already on, extinguish it
-                if (candleOn)
+                //lol
+            }
+            else
+            {
+                // If the key to light the held candle is pressed
+                if (!candleDead && Input.GetKeyDown(KeyCode.E))
                 {
-                    AudioManager.Instance.PlaySFX("BlowCandle");
-                    candleLighting.SetActive(false);
-                    particles.Stop();
+                    // If the candle is already on, extinguish it
+                    if (candleOn)
+                    {
+                        AudioManager.Instance.PlaySFX("BlowCandle");
+                        candleLighting.SetActive(false);
+                        particles.Stop();
+                    }
+                    // If it is off, light it
+                    else if (!candleOn)
+                    {
+                        AudioManager.Instance.PlaySFX("Match");
+                        candleLighting.SetActive(true);
+                        particles.Play();
+                    }
                 }
-                // If it is off, light it
-                else if (!candleOn)
-                {
-                    AudioManager.Instance.PlaySFX("Match");
-                    candleLighting.SetActive(true);
-                    particles.Play();
-                }
+             
             }
         }
     }
