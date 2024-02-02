@@ -25,7 +25,6 @@ public class BookLogic : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Update Running");
         if(bookScript.currentPage == 4)
         {
             // Show text
