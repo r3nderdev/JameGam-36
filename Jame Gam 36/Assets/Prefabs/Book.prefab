@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  bookText: {fileID: 0}
+  textPanel: {fileID: 0}
   bookScript: {fileID: 0}
 --- !u!95 &6845482159386267629
 Animator:
